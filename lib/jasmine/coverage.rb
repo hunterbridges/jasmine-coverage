@@ -1,3 +1,3 @@
-require_relative 'coverage/version'
+require File.join(File.dirname(__FILE__), 'coverage/version')
 
 load 'tasks/jasmine_coverage.rake'
