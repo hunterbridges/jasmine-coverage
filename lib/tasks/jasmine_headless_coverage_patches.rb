@@ -19,7 +19,7 @@ module Jasmine::Headless
       FileUtils.mkdir_p "#{testrigfolder}/target/fixtures"
       FileUtils.copy_entry("#{Jasmine::Coverage.output_dir}/../../spec", "#{testrigfolder}/spec")
       FileUtils.copy_entry("#{Jasmine::Coverage.output_dir}/../../app", "#{testrigfolder}/app")
-      FileUtils.copy_entry("#{Jasmine::Coverage.output_dir}/../fixtures", "#{testrigfolder}/target/fixtures")
+      FileUtils.copy_entry("#{Jasmine::Coverage.output_dir}/../fixtures", "#{testrigfolder}/target/fixtures") rescue nil
 
       jss = str.scan(/<script type="text\/javascript" src="(.*)"><\/script>/)
       jss << str.scan(/<link rel="stylesheet" href="(.*)" type="text\/css" \/>/)
