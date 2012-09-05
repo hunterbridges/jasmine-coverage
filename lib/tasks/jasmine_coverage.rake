@@ -9,7 +9,7 @@ if env =~ /^(development|test)$/
 
       require 'jasmine-headless-webkit'
       # Instill our patches for jasmine-headless to work
-      require_relative 'jasmine_headless_coverage_patches'
+      require File.join(File.dirname(__FILE__), 'jasmine_headless_coverage_patches')
 
       # We use jasmine-headless-webkit, since it has excellent programmatic integration with Jasmine
       # But... the 'headless' part of it doesn't work on TeamCity, so we use the headless gem
